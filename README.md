@@ -66,3 +66,27 @@ Optional arguments
 
   ##### ljust & rjust
         {{ variable|ljust:"length" }}, {{ variable|rjust:"length" }}
+
+## Template Tag
+      {% tag %}
+      {% tag %} ~ {% endtag %}
+
+##### for
+      {% for obj in values %} ~ {% endfor %}
+
+      {% for food in foods %} 
+         <li> {{ food.name }} </li>
+      {% endfor %}
+
+      {% for food in foods reversed %} 
+         <li> {{ food.name }} </li>
+      {% endfor %}
+
+      {% for food in foods %} 
+         <li> {{ food.name }} </li>
+      {% empty %}
+         <li> There is no food. </li>
+      {% endfor %}
+
+
+
